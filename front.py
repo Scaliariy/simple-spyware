@@ -24,7 +24,6 @@ def get_data(option_):
     return list(items_)
 
 
-@st.cache_data(ttl=150)
 def get_options():
     db = client.main
     options_ = db.logs.distinct("computer", {"date": today})
